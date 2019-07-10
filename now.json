@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "welcome-bot",
+  "alias": ["tichaiti-welcome-bot.now.sh"],
+  "builds": [
+    { "src": "src/index.js", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "src/index.js" }
+  ],
+  "env": {
+    "SLACK_TOKEN": "@slack-token",
+    "GENERAL_CHANNEL": "C4M75GB39"
+  }
+}

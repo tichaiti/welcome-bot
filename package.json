@@ -1,0 +1,17 @@
+{
+  "name": "welcome-bot",
+  "version": "1.0.0",
+  "description": "the welcome slackbot for the tichaiti SLACK GROUP",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "micro-dev src/index.js",
+    "test": "jest --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/web-api": "^5.0.1",
+    "micro": "^9.3.4",
+    "micro-dev": "^3.0.0"
+  }
+}
