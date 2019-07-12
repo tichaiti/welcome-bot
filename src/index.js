@@ -7,7 +7,7 @@ const {GENERAL_CHANNEL: channel} = process.env;
 module.exports = async (req, res) => {
   try {
     const { body } = req;
-    const { type, user={}, event={} } = body;
+    const { type, user={}, event={} } = body || {};
     const { id, channel } = user;
 
     console.debug(`le incoming payload of type: ${typeof body} `, body);
