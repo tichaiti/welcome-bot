@@ -1,4 +1,4 @@
-const { send, json } = require('micro');
+const { send } = require('micro');
 const { greeting, sendMessage} = require('./messenger');
 const { welcome } = require('./templates');
 
@@ -6,11 +6,11 @@ const {GENERAL_CHANNEL: channel} = process.env;
 
 module.exports = async (req, res) => {
   try {
-    const body = await json(req);
+    const { body } = req;
     const { type, user={}, event={} } = body;
     const { id, channel } = user;
 
-    console.log(body)
+    console.debug(`le incoming payload of type: ${typeof body} `, body);
     if (!['team_join'].includes(type)) 
       return send(res, 200, body);
 
@@ -24,9 +24,10 @@ module.exports = async (req, res) => {
     console.log('returning ', result);
     return send(res, 200, result);
   } catch(err) {
-    console.log(err);
+    console.error(err);
     return send(res, 500, {
-      error: 'something bad happened'
+      error: 'something bad happened',
+      data: err.data
     }); 
   }
 };
