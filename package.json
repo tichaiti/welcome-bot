@@ -11,7 +11,12 @@
   "license": "ISC",
   "dependencies": {
     "@slack/web-api": "^5.0.1",
+    "@yotie/micron": "^2.0.0-rc3",
+    "cheerio": "^1.0.0-rc.3",
     "micro": "^9.3.4",
-    "micro-dev": "^3.0.0"
+    "micro-dev": "^3.0.0",
+    "node-fetch": "^2.6.1",
+    "slack-block-builder": "^1.6.0",
+    "slack-message-builder": "^1.2.1"
   }
 }
