@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "welcome-bot",
+  "scope": "tichaiti",
   "alias": ["tichaiti-welcome-bot.now.sh"],
   "builds": [
     { "src": "src/index.js", "use": "@now/node" }

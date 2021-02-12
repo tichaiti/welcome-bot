@@ -50,7 +50,7 @@ exports.welcome = [
 		"elements": [
 			{
 				"type": "mrkdwn",
-				"text": "*Welcome Bot*"
+				"text": "*Welcome to tichaiti*"
 			}
 		]
 	}
